@@ -1,5 +1,5 @@
-import 'package:app_casa_sopa_vo_teresa/home_screen.dart';
 import 'package:flutter/material.dart';
+import 'home_screen.dart';
 
 void main() {
   runApp(MyApp());
@@ -18,4 +18,3 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-

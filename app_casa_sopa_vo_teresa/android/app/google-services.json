@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "261508528264",
+    "project_id": "casasopavoteresa",
+    "storage_bucket": "casasopavoteresa.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:261508528264:android:f1bfe8e61b2c819875c73d",
+        "android_client_info": {
+          "package_name": "com.example.app_casa_sopa_vo_teresa"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "261508528264-lr3t69t7a4f3s1qs4kdo4ehg92q4ugga.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCcxybQ4yLm3E72kK_3bNQE84TxU3qYV3s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "261508528264-lr3t69t7a4f3s1qs4kdo4ehg92q4ugga.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

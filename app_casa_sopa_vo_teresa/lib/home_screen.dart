@@ -1,5 +1,5 @@
-import 'package:app_casa_sopa_vo_teresa/doacao_screen.dart';
 import 'package:flutter/material.dart';
+import 'doacao_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({
@@ -36,7 +36,7 @@ class HomeScreen extends StatelessWidget {
           ),
           Text(
             "Fundada em 2013, a instituição conta com a ajuda de voluntários e tem como objetivo principal a distribuição gratuita de sopa que alimenta mais de 100 pessoas semanalmente em Alfenas.",
-            textAlign: TextAlign.center,
+            textAlign: TextAlign.justify,
             style: TextStyle(
               fontSize: 14,
               color: Colors.black,
@@ -45,7 +45,7 @@ class HomeScreen extends StatelessWidget {
           ),
           Text(
             "A sopa é distribuída para qualquer pessoa, todas as sextas-feiras no endereço da instituição.",
-            textAlign: TextAlign.center,
+            textAlign: TextAlign.justify,
             style: TextStyle(
               fontSize: 14,
               color: Colors.black,

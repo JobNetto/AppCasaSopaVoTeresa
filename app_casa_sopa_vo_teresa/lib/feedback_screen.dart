@@ -1,5 +1,4 @@
-import 'package:app_casa_sopa_vo_teresa/doacao_screen.dart';
-import 'package:app_casa_sopa_vo_teresa/home_screen.dart';
+import 'home_screen.dart';
 import 'package:flutter/material.dart';
 
 class FeedbackScreen extends StatelessWidget {

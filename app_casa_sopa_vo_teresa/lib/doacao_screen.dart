@@ -1,5 +1,7 @@
-import 'package:app_casa_sopa_vo_teresa/feedback_screen.dart';
+import 'feedback_screen.dart';
 import 'package:flutter/material.dart';
+
+//import 'package:flutter/material.dart';
 
 class DoacaoScreen extends StatelessWidget {
   @override
@@ -8,7 +10,7 @@ class DoacaoScreen extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Color(0xffffa500),
         title: Text(
-          'Casa da Sopa vó Teresa',
+          'Casa da Sopa Vó Teresa',
           textAlign: TextAlign.center,
         ),
       ),
