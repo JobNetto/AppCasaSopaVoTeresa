@@ -25,7 +25,7 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.all(100.0),
+      padding: const EdgeInsets.all(60.0),
       decoration: BoxDecoration(
           gradient: LinearGradient(
         begin: Alignment.topRight,
@@ -65,7 +65,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 hintText: "Senha",
               ),
             ),
-
+            SizedBox(height: 5.0),
             //botoes
             _isProcessing
                 ? CircularProgressIndicator()
