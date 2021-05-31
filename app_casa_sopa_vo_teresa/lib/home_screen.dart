@@ -1,3 +1,4 @@
+import 'package:app_casa_sopa_vo_teresa/login_screen.dart';
 import 'package:flutter/material.dart';
 import 'doacao_screen.dart';
 
@@ -90,7 +91,10 @@ class HomeScreen extends StatelessWidget {
             height: 40,
             child: ElevatedButton(
                 onPressed: () {
-                  print('Pressed');
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => LoginScreen()),
+                  );
                 },
                 style: ElevatedButton.styleFrom(
                   primary: Color(0xfff6cbe2),
