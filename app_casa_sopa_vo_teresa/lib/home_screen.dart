@@ -1,3 +1,4 @@
+import 'package:app_casa_sopa_vo_teresa/login_screen.dart';
 import 'package:flutter/material.dart';
 import 'doacao_screen.dart';
 
@@ -9,7 +10,7 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.all(100.0),
+      padding: const EdgeInsets.all(60.0),
       decoration: BoxDecoration(
           gradient: LinearGradient(
         begin: Alignment.topRight,
@@ -24,15 +25,15 @@ class HomeScreen extends StatelessWidget {
       )),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
+        //crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Image.asset(
             "images/logo.png",
-            width: 150,
-            height: 150,
+            width: 200,
+            height: 200,
           ),
           SizedBox(
-            height: 50,
+            height: 20,
           ),
           Text(
             "Fundada em 2013, a instituição conta com a ajuda de voluntários e tem como objetivo principal a distribuição gratuita de sopa que alimenta mais de 100 pessoas semanalmente em Alfenas.",
@@ -65,8 +66,8 @@ class HomeScreen extends StatelessWidget {
             height: 50,
           ),
           SizedBox(
-            width: 260,
-            height: 40,
+            width: 200,
+            height: 70,
             child: ElevatedButton(
                 onPressed: () {
                   Navigator.push(
@@ -89,16 +90,20 @@ class HomeScreen extends StatelessWidget {
             width: 200,
             height: 40,
             child: ElevatedButton(
-                onPressed: () {
-                  print('Pressed');
-                },
-                style: ElevatedButton.styleFrom(
-                  primary: Color(0xfff6cbe2),
-                  onPrimary: Colors.white,
-                  shadowColor: Colors.red,
-                  elevation: 5,
-                ),
-                child: Text('ENTRAR')),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => LoginScreen()),
+                );
+              },
+              style: ElevatedButton.styleFrom(
+                primary: Colors.pink[100],
+                onPrimary: Colors.white,
+                shadowColor: Colors.red,
+                elevation: 5,
+              ),
+              child: Text('LOGIN'),
+            ),
           ),
         ],
       ),
