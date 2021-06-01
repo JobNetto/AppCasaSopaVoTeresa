@@ -16,28 +16,29 @@ class DoacaoScreen extends StatelessWidget {
       ),
       body: Container(
         color: Colors.white,
-        padding: const EdgeInsets.all(20),
+        padding: EdgeInsets.fromLTRB(5, 20, 5, 20),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
+          //mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Text(
               'Marque sua opção de doação',
               textAlign: TextAlign.center,
-              style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
+              style: TextStyle(fontSize: 17, fontWeight: FontWeight.bold),
             ),
             SizedBox(
-              height: 25,
+              height: 20,
             ),
             Row(
-              crossAxisAlignment: CrossAxisAlignment.center,
+              //crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 RawMaterialButton(
                   onPressed: () {},
                   elevation: 2.0,
                   fillColor: Colors.white,
                   child: Text('ALIMENTO'),
-                  padding: EdgeInsets.all(43.0),
+                  padding: EdgeInsets.all(30),
                   shape: CircleBorder(),
                 ),
                 RawMaterialButton(
@@ -50,7 +51,7 @@ class DoacaoScreen extends StatelessWidget {
                       Text('VOLUNTÁRIO'),
                     ],
                   ),
-                  padding: EdgeInsets.all(35.0),
+                  padding: EdgeInsets.all(27.0),
                   shape: CircleBorder(),
                 ),
                 RawMaterialButton(
@@ -58,7 +59,7 @@ class DoacaoScreen extends StatelessWidget {
                   elevation: 2.0,
                   fillColor: Colors.white,
                   child: Text('DINHEIRO'),
-                  padding: EdgeInsets.all(43.0),
+                  padding: EdgeInsets.all(30.0),
                   shape: CircleBorder(),
                 ),
               ],
@@ -67,7 +68,7 @@ class DoacaoScreen extends StatelessWidget {
               height: 25,
             ),
             Text(
-              '______________________________________________________________',
+              '_____________________________________________________________',
               style: TextStyle(color: Colors.grey),
             ),
             SizedBox(
@@ -78,11 +79,11 @@ class DoacaoScreen extends StatelessWidget {
                 Text('Queremos saber quem é você,',
                     textAlign: TextAlign.center,
                     style:
-                        TextStyle(fontSize: 14, fontWeight: FontWeight.bold)),
+                        TextStyle(fontSize: 15, fontWeight: FontWeight.bold)),
                 Text(
                   'conte pra gente!',
                   textAlign: TextAlign.center,
-                  style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
+                  style: TextStyle(fontSize: 17, fontWeight: FontWeight.bold),
                 )
               ],
             ),
@@ -90,25 +91,26 @@ class DoacaoScreen extends StatelessWidget {
               height: 25,
             ),
             SizedBox(
-                width: 400,
+                width: 300,
                 child: TextField(
                   autofocus: false,
-                  decoration: InputDecoration(hintText: 'Digite seu nome'),
+                  decoration: InputDecoration(hintText: 'Nome completo'),
                 )),
             SizedBox(
-                width: 400,
+                width: 300,
                 child: TextField(
                   autofocus: false,
                   decoration: InputDecoration(hintText: 'E-mail'),
                 )),
             SizedBox(
-                width: 400,
+                width: 300,
                 child: TextField(
                   autofocus: false,
-                  decoration: InputDecoration(hintText: 'Celular'),
+                  decoration:
+                      InputDecoration(hintText: 'Celular (DDD + número)'),
                 )),
             SizedBox(
-              height: 125,
+              height: 80,
             ),
             SizedBox(
               width: 260,

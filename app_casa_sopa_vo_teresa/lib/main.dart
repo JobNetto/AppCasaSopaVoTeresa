@@ -25,10 +25,7 @@ class MyApp extends StatelessWidget {
         StreamProvider(create: (context) => firestoreservice.getUsuarios()),
       ],
       child: MaterialApp(
-        title: 'Flutter Demo',
-        theme: ThemeData(
-          primarySwatch: Colors.blue,
-        ),
+        title: 'Casa da Sopa Vó Teresa',
         home: HomeScreen(),
       ),
     );

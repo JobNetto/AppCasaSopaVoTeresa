@@ -29,8 +29,8 @@ class HomeScreen extends StatelessWidget {
         children: [
           Image.asset(
             "images/logo.png",
-            width: 150,
-            height: 150,
+            width: 200,
+            height: 200,
           ),
           SizedBox(
             height: 20,
@@ -67,7 +67,7 @@ class HomeScreen extends StatelessWidget {
           ),
           SizedBox(
             width: 200,
-            height: 40,
+            height: 70,
             child: ElevatedButton(
                 onPressed: () {
                   Navigator.push(
@@ -90,19 +90,20 @@ class HomeScreen extends StatelessWidget {
             width: 200,
             height: 40,
             child: ElevatedButton(
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => LoginScreen()),
-                  );
-                },
-                style: ElevatedButton.styleFrom(
-                  primary: Colors.pink,
-                  onPrimary: Colors.white,
-                  shadowColor: Colors.red,
-                  elevation: 5,
-                ),
-                child: Text('ENTRAR')),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => LoginScreen()),
+                );
+              },
+              style: ElevatedButton.styleFrom(
+                primary: Colors.pink[100],
+                onPrimary: Colors.white,
+                shadowColor: Colors.red,
+                elevation: 5,
+              ),
+              child: Text('LOGIN'),
+            ),
           ),
         ],
       ),
