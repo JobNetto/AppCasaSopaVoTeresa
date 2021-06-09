@@ -1,5 +1,9 @@
-import 'package:app_casa_sopa_vo_teresa/home_screen.dart';
 import 'package:app_casa_sopa_vo_teresa/providers/usuario_models.dart';
+import 'package:app_casa_sopa_vo_teresa/screens/admin/adm_home_screen.dart';
+import 'package:app_casa_sopa_vo_teresa/screens/admin/cadastro_screen.dart';
+import 'package:app_casa_sopa_vo_teresa/screens/base/doacao_screen.dart';
+import 'package:app_casa_sopa_vo_teresa/screens/base/home_screen.dart';
+import 'package:app_casa_sopa_vo_teresa/screens/base/login_screen.dart';
 import 'package:app_casa_sopa_vo_teresa/services/firestore_service.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';

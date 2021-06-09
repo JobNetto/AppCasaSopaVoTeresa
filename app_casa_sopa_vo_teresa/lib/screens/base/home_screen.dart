@@ -1,4 +1,4 @@
-import 'package:app_casa_sopa_vo_teresa/login_screen.dart';
+import 'package:app_casa_sopa_vo_teresa/screens/base/login_screen.dart';
 import 'package:flutter/material.dart';
 import 'doacao_screen.dart';
 

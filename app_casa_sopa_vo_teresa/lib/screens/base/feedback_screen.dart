@@ -23,7 +23,7 @@ class FeedbackScreen extends StatelessWidget {
         ],
       )),
       child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Image.asset(
