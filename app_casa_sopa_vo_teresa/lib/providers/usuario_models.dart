@@ -9,13 +9,17 @@ class UsuarioModel extends ChangeNotifier {
   String _usuarioId;
   String _nome;
   String _email;
-  int _celular;
+  double _celular;
+  String _doacao;
+  String _interesse;
   var uuid = Uuid();
 
   //GETTERS AND SETTERS
   String get nome => _nome;
   String get email => _email;
-  int get celular => _celular;
+  double get celular => _celular;
+  String get doacao => _doacao;
+  String get interesse => _interesse;
 
   setNome(String xnome) {
     _nome = xnome;
@@ -27,29 +31,49 @@ class UsuarioModel extends ChangeNotifier {
     notifyListeners();
   }
 
-  setCelular(String xcecular) {
-    _celular = int.parse(xcecular);
+  setCelular(String xcelular) {
+    _celular = double.parse(xcelular);
     notifyListeners();
   }
 
-  loadProduto(Usuario usuario) {
+  setDoacao(String xdoacao) {
+    _doacao = xdoacao;
+    notifyListeners();
+  }
+
+  setInteresse(String xinteresse) {
+    _interesse = xinteresse;
+    notifyListeners();
+  }
+
+  loadUsuario(Usuario usuario) {
     _nome = usuario.nome;
     _email = usuario.email;
     _celular = usuario.celular;
+    _doacao = usuario.doacao;
+    _interesse = usuario.interesse;
     _usuarioId = usuario.usuarioId;
   }
 
-  createUsuario() {
+  saveUsuario() {
     //CREATE
     if (_usuarioId == null) {
       var novoUsuario = Usuario(
-          nome: nome, email: email, celular: celular, usuarioId: uuid.v4());
-      firestoreservice.createUsuario(novoUsuario);
+          nome: nome,
+          email: email,
+          celular: celular,
+          interesse: interesse,
+          usuarioId: uuid.v4());
+      firestoreservice.saveUsuario(novoUsuario);
     } else {
       //UPDATE
       var alteraUsuario = Usuario(
-          nome: nome, celular: celular, email: email, usuarioId: _usuarioId);
-      firestoreservice.createUsuario(alteraUsuario);
+          nome: nome,
+          email: email,
+          celular: celular,
+          interesse: interesse,
+          usuarioId: _usuarioId);
+      firestoreservice.saveUsuario(alteraUsuario);
     }
   }
 

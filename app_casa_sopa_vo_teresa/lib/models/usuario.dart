@@ -2,16 +2,26 @@ class Usuario {
   final String usuarioId;
   final String nome;
   final String email;
-  final int celular;
+  final double celular;
+  final String doacao;
+  final String interesse;
 
-  Usuario({this.usuarioId, this.nome, this.email, this.celular});
+  Usuario(
+      {this.usuarioId,
+      this.nome,
+      this.email,
+      this.celular,
+      this.doacao,
+      this.interesse});
 
   Map<String, dynamic> toMap() {
     return {
-      'produtoId': usuarioId,
+      'usuarioId': usuarioId,
       'nome': nome,
       'email': email,
-      'celular': celular
+      'celular': celular,
+      'doacao': doacao,
+      'interesse': interesse,
     };
   }
 
@@ -19,5 +29,7 @@ class Usuario {
       : usuarioId = firestoredocument['usuarioId'],
         nome = firestoredocument['nome'],
         email = firestoredocument['email'],
-        celular = firestoredocument['celular'];
+        celular = firestoredocument['celular'],
+        doacao = firestoredocument['doacao'],
+        interesse = firestoredocument['interesse'];
 }

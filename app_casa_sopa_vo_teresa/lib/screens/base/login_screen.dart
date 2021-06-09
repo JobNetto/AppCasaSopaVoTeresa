@@ -1,4 +1,5 @@
-import 'package:app_casa_sopa_vo_teresa/doacao_screen.dart';
+import 'package:app_casa_sopa_vo_teresa/screens/admin/adm_home_screen.dart';
+import 'package:app_casa_sopa_vo_teresa/screens/base/doacao_screen.dart';
 import 'package:app_casa_sopa_vo_teresa/services/autenticacao_service.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -104,7 +105,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                   if (user != null) {
                                     Navigator.of(context).pushReplacement(
                                       MaterialPageRoute(
-                                        builder: (context) => DoacaoScreen(),
+                                        builder: (context) => AdminHomeScreen(),
                                       ),
                                     );
                                   }
