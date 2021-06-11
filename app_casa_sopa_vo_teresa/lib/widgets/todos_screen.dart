@@ -1,4 +1,3 @@
-import 'package:app_casa_sopa_vo_teresa/data/doacao_data.dart';
 import 'package:app_casa_sopa_vo_teresa/models/Doacao.dart';
 import 'package:app_casa_sopa_vo_teresa/models/usuario.dart';
 import 'package:flutter/material.dart';
@@ -29,11 +28,11 @@ class TodosWidget extends StatelessWidget {
                     child: Row(
                       children: [
                         IconButton(
-                            onPressed: null,
+                            onPressed: () {},
                             color: Colors.yellow,
                             icon: Icon(Icons.edit)),
                         IconButton(
-                            onPressed: null,
+                            onPressed: () {},
                             color: Colors.red,
                             icon: Icon(Icons.delete)),
                       ],

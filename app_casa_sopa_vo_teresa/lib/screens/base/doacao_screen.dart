@@ -23,6 +23,8 @@ class _DoacaoScreenState extends State<DoacaoScreen> {
   final doacaocontroller = TextEditingController();
   final interessecontroller = TextEditingController();
 
+  var botaoalimentocor = Colors.white;
+
   //SERVE PARA VERIFICAR SE ESTÁ VINDO ALGUMA COISA DO CONSTRUTOR OU NÃO
   //PARA SABER SE VAI CRIAR UM PRODUTO OU ALTERAR O PRODUTO EXISTENTE
   @override
@@ -32,7 +34,7 @@ class _DoacaoScreenState extends State<DoacaoScreen> {
       emailcontroller.text = "";
       celularcontroller.text = "";
       doacaocontroller.text = "";
-      interessecontroller.text = "SIM"; // para pesquisar apenas interessados
+      interessecontroller.text = ""; // para pesquisar apenas interessados
 
       final usuarioprovider = Provider.of<UsuarioModel>(context, listen: false);
       usuarioprovider.loadUsuario(Usuario());
@@ -52,6 +54,7 @@ class _DoacaoScreenState extends State<DoacaoScreen> {
   @override
   Widget build(BuildContext context) {
     final usuarioprovider = Provider.of<UsuarioModel>(context);
+
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Color(0xffffa500),
@@ -88,9 +91,12 @@ class _DoacaoScreenState extends State<DoacaoScreen> {
                   shape: CircleBorder(),
                 ),
                 RawMaterialButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    usuarioprovider.setInteresse("VOLUNTÁRIO");
+                    botaoalimentocor = Colors.red;
+                  },
                   elevation: 3.0,
-                  fillColor: Colors.white,
+                  fillColor: botaoalimentocor,
                   child: Column(
                     children: [
                       Text('SER'),

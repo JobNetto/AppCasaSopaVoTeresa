@@ -6,7 +6,9 @@ import 'package:provider/provider.dart';
 class InteresseWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final usuarios = Provider.of<List<Usuario>>(context);
+    final usuarios1 = Provider.of<List<Usuario>>(context);
+    final usuarios =
+        usuarios1.where((usuario) => usuario.interesse == 'SIM').toList();
 
     return Scaffold(
       body: (usuarios != null)
@@ -31,7 +33,12 @@ class InteresseWidget extends StatelessWidget {
                             color: Colors.yellow,
                             icon: Icon(Icons.edit)),
                         IconButton(
-                            onPressed: null,
+                            onPressed: () {
+                              /* 
+                              usuarioprovider
+                                  .removeUsuario(widget.usuario.usuarioId);
+                              Navigator.of(context).pop(); */
+                            },
                             color: Colors.red,
                             icon: Icon(Icons.delete)),
                       ],
