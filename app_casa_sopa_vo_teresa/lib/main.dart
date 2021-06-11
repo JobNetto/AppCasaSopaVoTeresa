@@ -27,6 +27,7 @@ class MyApp extends StatelessWidget {
       providers: [
         ChangeNotifierProvider(create: (context) => UsuarioModel()),
         StreamProvider(create: (context) => firestoreservice.getUsuarios()),
+        
       ],
       child: MaterialApp(
         title: 'Casa da Sopa Vó Teresa',
