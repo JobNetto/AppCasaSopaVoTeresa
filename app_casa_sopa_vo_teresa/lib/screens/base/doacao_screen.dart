@@ -23,7 +23,10 @@ class _DoacaoScreenState extends State<DoacaoScreen> {
   final doacaocontroller = TextEditingController();
   final interessecontroller = TextEditingController();
 
-  var botaoalimentocor = Colors.white;
+  var botaoAlimentoCor = Colors.white;
+  var botaoVoluntarioCor = Colors.white;
+  var botaoDinheiroCor = Colors.white;
+
 
   //SERVE PARA VERIFICAR SE ESTÁ VINDO ALGUMA COISA DO CONSTRUTOR OU NÃO
   //PARA SABER SE VAI CRIAR UM PRODUTO OU ALTERAR O PRODUTO EXISTENTE
@@ -49,6 +52,27 @@ class _DoacaoScreenState extends State<DoacaoScreen> {
       usuarioprovider.loadUsuario(widget.usuario);
     }
     super.initState();
+  }
+  
+  void setColor(button){
+    switch(button)
+    {
+      case 'ALIMENTO':
+        botaoAlimentoCor = Colors.red;
+        botaoVoluntarioCor = Colors.white;
+        botaoDinheiroCor = Colors.white;
+      break;
+      case 'VOLUNTARIO':
+        botaoAlimentoCor = Colors.white;
+        botaoVoluntarioCor = Colors.red;
+        botaoDinheiroCor = Colors.white;
+      break;
+      case 'DINHEIRO':
+        botaoAlimentoCor = Colors.white;
+        botaoVoluntarioCor = Colors.white;
+        botaoDinheiroCor = Colors.red;
+      break;
+    }
   }
 
   @override
@@ -83,20 +107,23 @@ class _DoacaoScreenState extends State<DoacaoScreen> {
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 RawMaterialButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    usuarioprovider.setInteresse('ALIMENTO');
+                    setColor('ALIMENTO');
+                  },
                   elevation: 3.0,
-                  fillColor: Colors.white,
+                  fillColor: botaoAlimentoCor,
                   child: Text('ALIMENTO'),
                   padding: EdgeInsets.all(30),
                   shape: CircleBorder(),
                 ),
                 RawMaterialButton(
                   onPressed: () {
-                    usuarioprovider.setInteresse("VOLUNTÁRIO");
-                    botaoalimentocor = Colors.red;
+                    usuarioprovider.setInteresse("VOLUNTARIO");
+                    setColor('VOLUNTARIO');
                   },
                   elevation: 3.0,
-                  fillColor: botaoalimentocor,
+                  fillColor: botaoVoluntarioCor,
                   child: Column(
                     children: [
                       Text('SER'),
@@ -107,9 +134,12 @@ class _DoacaoScreenState extends State<DoacaoScreen> {
                   shape: CircleBorder(),
                 ),
                 RawMaterialButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    usuarioprovider.setInteresse("DINHEIRO");
+                    setColor('DINHEIRO');
+                  },
                   elevation: 3.0,
-                  fillColor: Colors.white,
+                  fillColor: botaoDinheiroCor,
                   child: Text('DINHEIRO'),
                   padding: EdgeInsets.all(30.0),
                   shape: CircleBorder(),
